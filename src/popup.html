@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      html, body, div, h2 {
+        padding: 0;
+        margin: 0;
+      }
+      .wrapper {
+        width: 300px;
+        height: auto;
+        padding: 10px;
+        overflow: hidden;
+      }
+      h2 {
+        color: #333;
+        font-size: 20px;
+        margin: 0 0 10px;
+      }
+      .textarea {
+        display: block;
+        resize: vertical;
+        padding: 5px 15px;
+        line-height: 1.5;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: inherit;
+        color: #606266;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #dcdfe6;
+        border-radius: 4px;
+        transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+      }
+      .textarea:focus {
+        outline: none;
+        border-color: #409eff;
+      }
+      .type-box {
+        padding: 10px 0;
+      }
+      .type-box label {
+        color: #333;;
+      }
+      .controls-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px 10px;
+      }
+      .btn {
+        outline: none;
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+        color: #fff;
+        background-color: #409eff;
+        border-color: #409eff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>URI编码/URI解码</h2>
+      <textarea class="textarea" id="input"></textarea>
+      <div class="type-box">
+        <label><input type="radio" name="encodeType" value="1" />encodeURI</label>
+        <label><input type="radio" name="encodeType" value="2" checked />encodeURIComponent</label>
+      </div>
+      <div class="controls-box">
+        <button type="button" class="btn" id="encode-btn">URI编码</button>
+        <button type="button" class="btn" id="decode-btn">URI解码</button>
+      </div>
+      <textarea class="textarea" id="output"></textarea>
+    </div>
+    <script src='popup.js'></script>
+  </body>
+</html>
